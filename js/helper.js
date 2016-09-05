@@ -201,11 +201,6 @@ function initializeMap() {
 
 }
 
-
-
-//Calls the initializeMap() function when the page loads
-window.addEventListener('load', initializeMap);
-
 //Vanilla JS way to listen for resizing of the window
 //and adjust map bounds
 window.addEventListener('resize', function(e) {
