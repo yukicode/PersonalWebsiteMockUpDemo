@@ -1,0 +1,142 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
+
+* {
+    /*border: 1px solid red;*/
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: Lato, sans-serif;
+    color: #2d3c49;
+}
+
+ul {
+    list-style-type: none;
+}
+
+span {
+    padding: 5px;
+}
+
+.logo {
+    padding: 10px 0 10px 20px;
+}
+
+.logo img {
+    max-width: 80px;
+    margin-left: 0;
+    margin-top: 15px;
+}
+
+#title h1, #title h3 {
+    padding-right: 10px;
+    font-weight: 300;
+    margin: 15px 0 0 0;
+}
+
+#title h1 {
+    font-size: 50px;
+}
+
+#title h3 {
+    font-size: 20px;
+}
+
+.divide {
+    border: 2px solid #7d97ad;
+    margin: 20px auto;
+}
+
+.gray {
+    background-color: #f3f3f3;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    padding-bottom: 10px;
+    clear: both;
+}
+
+.blue {
+    background-color: #02b3e4;
+}
+
+.blue-text {
+    color: #02b3e4;
+}
+
+.dark-text {
+    font-weight: bold;
+    color: #2d3c49;
+}
+
+.text-400 {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.text-light-color {
+    color: #7d97ad;
+}
+
+.project-entry {
+    margin: 15px auto;
+}
+
+.project-pop {
+    cursor: pointer;
+}
+
+a {
+    color: #1199c3;
+    text-decoration: none;
+    display: block;
+}
+
+.date-text, .location-text {
+    font-style: italic;
+    color: #7d97ad;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.modal-img {
+    margin: 1px auto;
+}
+
+#map {
+    display: block;
+    height: 100%;
+}
+
+#mapDiv {
+    height: 400px;
+}
+
+@media only screen and (max-width: 767px) {
+    .logo img {
+        height: 40px;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    #title h1 {
+        font-size: 40px;
+    }
+
+    #title h3 {
+        font-size: 15px;
+    }
+
+    .text-400 {
+        font-size: 25px;
+    };
+}
