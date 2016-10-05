@@ -107,7 +107,6 @@ bio.display = function() {
     appendToHTML(this.contacts.email, "#footerContacts", HTMLemail);
     appendToHTML(this.contacts.github, "#footerContacts", HTMLgithub);
     appendToHTML(this.contacts.location, "#footerContacts", HTMLlocation);
-    appendToHTML(this.welcomeMessage, "#welcome", HTMLwelcomeMsg);
 };
 
 projects.display = function() {
@@ -186,5 +185,3 @@ bio.display();
 education.display();
 work.display();
 projects.display();
-
-$("#mapDiv").append(googleMap);

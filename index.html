@@ -7,35 +7,19 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 </head>
 
 <body>
-    <header class="container">
-        <div class="row" id="header"></div>
-        <div class="row divide"></div>
-        <ul class="row" id="topContact"></ul>
-    </header>
-
-    <main class="container">
-        <section class="row gray" id="welcome">
-        </section>
-        <picture class="row">
-            <img id="skill-img" src="./images/graph.svg" class="img-responsive center-block" alt="my skills">
-        </picture>
+    <main class ="container" id="main">
+        <header>
+            <div class="row" id="header"></div>
+            <ul class="row" id="topContact"></ul>
+        </header>
         <section class="row" id="project">
             <h2 class="col-sm-12 text-400 text-light-color">Featured Work</h2>
         </section>
         <section class="row gray" id="education">
             <h2 class="col-sm-12 text-400 text-light-color">Education</h2>
-        </section>
-        <section class="row" id="workExperience">
-            <h2 class="col-sm-12 text-400 text-light-color">Work Experience</h2>
-        </section>
-        <section class="row" id="mapDiv">
-            <h2 class="col-sm-12 text-400 text-light-color">Where I've Lived and Worked</h2>
         </section>
     </main>
 
@@ -43,27 +27,20 @@
         <h2 class="blue text-center row">LET US CONNECT</h2>
         <ul id="footerContacts" class="row"></ul>
     </footer>
+    <section id="background">
+        <img id="background-img" class="img-responsive center-block" src="./images/graph.svg" alt="background-img-skills">
+    </section>
 
-    <!-- Modal -->
-
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
     <script src="./js/helper.js"></script>
     <script src="./js/resumeBuilder.js"></script>
     <script>
         if (document.getElementsByClassName('blue-text').length === 0) {
             document.getElementById('topContact').style.display = 'none';
         }
-        if (document.getElementById('welcome-message') === null) {
-            document.getElementById('welcome').style.display = 'none';
-        } else {
-            setInterval(function() {
-                document.getElementById('welcome').style.display = 'none';
-            }, 5000);
-        }
         if (document.getElementsByTagName('h1').length === 0) {
             document.getElementById('header').style.display = 'none';
-        }
-        if (document.getElementsByClassName('work-entry').length === 0) {
-            document.getElementById('workExperience').style.display = 'none';
         }
         if (document.getElementsByClassName('project-entry').length === 0) {
             document.getElementById('projects').style.display = 'none';
@@ -73,9 +50,6 @@
         }
         if (document.getElementsByClassName('blue-text').length === 0) {
             document.getElementById('lets-connect').style.display = 'none';
-        }
-        if (document.getElementById('map') === null) {
-            document.getElementById('mapDiv').style.display = 'none';
         }
     </script>
 </body>

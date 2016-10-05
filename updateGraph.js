@@ -12,12 +12,19 @@ var colors = ["#1199c3","#2d3c49"];
 var skills = [
     "C#",
     "JavaScript",
-    ".net",
-    "HTML",
-    "CSS",
-    "NodeJS",
-    "C++",
-    "Git",
+    "HTML5",
+    "CSS3",
+    "Node.js",
+    "Express.js",
+    "Gulp.js",
+    "Jasmine",
+    "Bootstrap",
+    "jQuery",
+    "git",
+    "Knockout.js",
+    "Visual Studio",
+    "Visual Studio Code",
+    "Sublime Text",
 ];
 
 fs.readFile("file.txt", "utf8", function(err, data){
@@ -29,10 +36,10 @@ jsdom.env(
     [ "http://d3js.org/d3.v3.min.js",],
     function (err, window) {
         var words = skills.map(function(d) {
-            return {text: d, size: 60 + Math.random() * 60};
+            return {text: d, size: 55 + Math.random() * 20};
         });
         var decorations = decorationArray.map(function(d){
-            return {text: d, size: 10 + Math.random() * 18};
+            return {text: d, size: 10 + Math.random() * 10};
         })
         words = words.concat(decorations);
         var worldCloud = cloud()
@@ -47,13 +54,13 @@ jsdom.env(
             .start();
         var svg = window.d3.select("body")
             .append("svg")
-            .attr("width", 1170)
+            .attr("width", 1080)
             .attr("height", 350)
             .attr("xmlns","http://www.w3.org/2000/svg")
             .attr("xmlns:xlink","http://www.w3.org/1999/xlink");
 
         svg.append("g")
-            .attr("transform", "translate(" + 1170 / 2 + "," + 350 / 2 + ")")
+            .attr("transform", "translate(" + 1080 / 2 + "," + 350 / 2 + ")")
             .selectAll("text")
             .data(words)
             .enter().append("text")
