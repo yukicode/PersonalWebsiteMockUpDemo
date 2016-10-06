@@ -10,16 +10,20 @@
 </head>
 
 <body>
-    <main class ="container" id="main">
+    <main id="main">
         <header>
-            <div class="row" id="header"></div>
-            <ul class="row" id="topContact"></ul>
+            <img id="bio-img" class="img-responsive center-block" src="./images/bio.jpg" alt="bio-image">
+            <div class="text-center" id="title">
+                <h1>XUERU MCMULLAN</h1>
+                <h2>FRONT-END WEB DEVELOPER</h2>
+            </div>
+            <ul class="container" id="topContact"></ul>
         </header>
-        <section class="row" id="project">
-            <h2 class="col-sm-12 text-400 text-light-color">Featured Work</h2>
+        <section class="container" id="project">
+            <h2 class="row text-400 text-light-color">Featured Projects</h2>
         </section>
-        <section class="row gray" id="education">
-            <h2 class="col-sm-12 text-400 text-light-color">Education</h2>
+        <section class="container gray" id="education">
+            <h2 class="row text-400 text-light-color">Education</h2>
         </section>
     </main>
 
@@ -27,31 +31,14 @@
         <h2 class="blue text-center row">LET US CONNECT</h2>
         <ul id="footerContacts" class="row"></ul>
     </footer>
+
     <section id="background">
         <img id="background-img" class="img-responsive center-block" src="./images/graph.svg" alt="background-img-skills">
     </section>
 
     <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="./js/helper.js"></script>
-    <script src="./js/resumeBuilder.js"></script>
-    <script>
-        if (document.getElementsByClassName('blue-text').length === 0) {
-            document.getElementById('topContact').style.display = 'none';
-        }
-        if (document.getElementsByTagName('h1').length === 0) {
-            document.getElementById('header').style.display = 'none';
-        }
-        if (document.getElementsByClassName('project-entry').length === 0) {
-            document.getElementById('projects').style.display = 'none';
-        }
-        if (document.getElementsByClassName('education-entry').length === 0) {
-            document.getElementById('education').style.display = 'none';
-        }
-        if (document.getElementsByClassName('blue-text').length === 0) {
-            document.getElementById('lets-connect').style.display = 'none';
-        }
-    </script>
+
 </body>
 
 </html>
