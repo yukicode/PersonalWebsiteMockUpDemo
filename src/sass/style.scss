@@ -1,11 +1,169 @@
+//converted by http://css2sass.herokuapp.com/
+@import "variables";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
 
 * {
-    // border: 1px solid red;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    font-family: Lato, sans-serif;
-    color: #2d3c49;
+  /*border: 1px solid red;*/
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: Lato, sans-serif;
+  color: $dark-gray-blue;
+;
+}
+
+#background {
+  position: fixed;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+}
+
+#background-img {
+  width: 100%;
+  z-index: 0;
+}
+
+main {
+  margin-top: 400px;
+  width: 100%;
+  z-index: 100;
+  background-color: $white;
+  border-top: 4px solid $dark-gray-blue;
+;
+}
+
+#bio-img {
+  border: 4px solid $dark-gray-blue;
+;
+  border-radius: 50%;
+  position: relative;
+  top: -100px;
+  max-width: 200px;
+}
+
+#title {
+  position: relative;
+  top: -50px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+span {
+  padding: 5px;
+}
+
+.logo {
+  padding: 10px 0 10px 20px;
+  img {
+    max-width: 80px;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+}
+
+#title {
+  h1, h3 {
+    padding-right: 10px;
+    font-weight: 300;
+    margin: 15px 0 0 0;
+  }
+  h1 {
+    font-size: 50px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.divide {
+  border: 2px solid $light-gray-blue;
+  margin: 20px auto;
+}
+
+.gray {
+  background-color: $gray;
+  border-radius: 4px 4px 4px 4px;
+  -moz-border-radius: 4px 4px 4px 4px;
+  -webkit-border-radius: 4px 4px 4px 4px;
+  padding-bottom: 10px;
+  clear: both;
+}
+
+.blue {
+  background-color: $light-blue;
+}
+
+.blue-text {
+  color: $light-blue;
+}
+
+.dark-text {
+  font-weight: bold;
+  color: #2d3c49;
+}
+
+.text-400 {
+  font-weight: 400;
+  font-size: 30px;
+}
+
+.text-light-color {
+  color: #7d97ad;
+}
+
+.project-entry {
+  margin: 15px auto;
+  > img {
+    border: 1px solid $light-blue;
+  }
+}
+
+.project-pop {
+  cursor: pointer;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+  display: block;
+}
+
+.date-text, .location-text {
+  font-style: italic;
+  color: $light-gray-blue;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.modal-img {
+  margin: 1px auto;
+}
+
+@media only screen and (max-width: 767px) {
+  .logo img {
+    height: 40px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  #title {
+    text-align: center;
+    h1 {
+      font-size: 40px;
+    }
+    h3 {
+      font-size: 15px;
+    }
+  }
+  .text-400 {
+    font-size: 25px;
+  }
 }
