@@ -14,8 +14,8 @@
         <header>
             <img id="bio-img" class="img-responsive center-block" src="./images/bio.jpg" alt="bio-image">
             <div class="text-center" id="title">
-                <h1>XUERU MCMULLAN</h1>
-                <h2>FRONT-END WEB DEVELOPER</h2>
+                <h1 data-bind="text: bio.name"></h1>
+                <h2 data-bind="text: bio.title"></h2>
             </div>
             <ul class="container" id="topContact"></ul>
         </header>
@@ -66,9 +66,9 @@
         <img id="background-img" class="img-responsive center-block" src="./images/graph.svg" alt="background-img-skills">
     </section>
 
-    <script src="js/jquery-1.12.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
+    <script src="js/knockout-3.4.0.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

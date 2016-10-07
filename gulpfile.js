@@ -81,7 +81,7 @@ gulp.task('sass', function () {
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./src/js/**/*', ['js']);
+  gulp.watch('./src/js/**/*').on('change', browserSync.reload);
   gulp.watch('./src/index.html').on('change', browserSync.reload);
   gulp.watch(['./src/sass/**/*'], ['sass']);
 });
