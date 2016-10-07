@@ -32,3 +32,4 @@ Thumbs.db
 node_modules/
 bower_components/
 data/
+.sass-cache/
