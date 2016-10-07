@@ -1,0 +1,6 @@
+@mixin crossBrowser($property, $value){
+    #{$property}: $value;
+    -webkit-#{$property}: $value;
+    -ms-box-#{$property}: $value;
+    -moz-box-#{$property}: $value;
+}

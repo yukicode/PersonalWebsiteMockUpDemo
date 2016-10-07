@@ -1,41 +1,37 @@
 //converted by http://css2sass.herokuapp.com/
 @import "variables";
+@import "mixin";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
+
+main {
+  margin-top: 400px;
+  width: 100%;
+  z-index: $main;
+  background-color: $white;
+  border-top: 4px solid $dark-gray-blue;
+}
 
 * {
   /*border: 1px solid red;*/
-  box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
+  @include crossBrowser(box-sizing, border-box);
   font-family: Lato, sans-serif;
   color: $dark-gray-blue;
-;
 }
 
 #background {
   position: fixed;
   width: 100%;
-  z-index: -1;
+  z-index: $background;
   top: 0;
-}
-
-#background-img {
-  width: 100%;
-  z-index: 0;
-}
-
-main {
-  margin-top: 400px;
-  width: 100%;
-  z-index: 100;
-  background-color: $white;
-  border-top: 4px solid $dark-gray-blue;
+  img {
+    width: 100%;
+    z-index: 0;
+  }
 }
 
 #bio-img {
   border: 4px solid $dark-gray-blue;
-  border-radius: 50%;
+  @include crossBrowser(border-radius, 50%);
   position: relative;
   top: -100px;
   max-width: 200px;
@@ -44,36 +40,18 @@ main {
 #title {
   position: relative;
   top: -50px;
+  h1 {
+      font-size: 50px;
+  }
 }
 
 ul {
   list-style-type: none;
 }
 
-span {
-  padding: 5px;
-}
-
-
-#title {
-  h1, h3 {
-    padding-right: 10px;
-    font-weight: 300;
-    margin: 15px 0 0 0;
-  }
-  h1 {
-    font-size: 50px;
-  }
-  h3 {
-    font-size: 20px;
-  }
-}
-
 .gray {
   background-color: $gray;
-  border-radius: 4px 4px 4px 4px;
-  -moz-border-radius: 4px 4px 4px 4px;
-  -webkit-border-radius: 4px 4px 4px 4px;
+  @include crossBrowser(border-radius, 4px 4px 4px 4px);
   padding-bottom: 10px;
   clear: both;
 }
@@ -100,11 +78,6 @@ a {
   color: $blue;
   text-decoration: none;
   display: block;
-}
-
-.date-text, .location-text {
-  font-style: italic;
-  color: $light-gray-blue;
 }
 
 .ellipsis {
