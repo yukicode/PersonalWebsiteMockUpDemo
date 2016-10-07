@@ -4,7 +4,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
 
 * {
-  /*border: 1px solid red;*/
+//   border: 1px solid red;
   @include crossBrowser(box-sizing, border-box);
   font-family: Lato, sans-serif;
   color: $dark-gray-blue;
@@ -47,6 +47,23 @@ main {
 
 ul {
   list-style-type: none;
+}
+
+.section-title {
+    height: 15vh;
+}
+
+.project-entry {
+    padding: 0;
+    border: 1px solid $light-gray-blue;
+    @include crossBrowser(border-radius, 3px);
+    @include crossBrowser(box-shadow, 0px 0px 10px -6px $light-gray-blue);
+    .buttons {
+        padding: 3px;
+    }
+    &:hover {
+        @include crossBrowser(box-shadow, 5px 5px 20px -6px $light-gray-blue);
+    }
 }
 
 .gray {
