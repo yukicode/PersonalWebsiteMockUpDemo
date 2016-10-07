@@ -70,7 +70,7 @@ gulp.task("build:css", ["clean"], function() {
 gulp.task('sass', function () {
     return sass('./src/sass/style.scss', {
       sourcemap: true,
-      style: 'expanded'
+      style: 'expanded',
     })
     .on('error', function (err) {
         console.error('Error!', err.message);
@@ -82,6 +82,7 @@ gulp.task('sass', function () {
 
 gulp.task('watch', function() {
   gulp.watch('./src/js/**/*', ['js']);
+  gulp.watch('./src/index.html').on('change', browserSync.reload);
   gulp.watch(['./src/sass/**/*'], ['sass']);
 });
 

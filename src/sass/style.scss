@@ -3,19 +3,20 @@
 @import "mixin";
 @import url(https://fonts.googleapis.com/css?family=Lato:400,100,300);
 
-main {
-  margin-top: 400px;
-  width: 100%;
-  z-index: $main;
-  background-color: $white;
-  border-top: 4px solid $dark-gray-blue;
-}
-
 * {
   /*border: 1px solid red;*/
   @include crossBrowser(box-sizing, border-box);
   font-family: Lato, sans-serif;
   color: $dark-gray-blue;
+}
+
+main {
+  margin-top: 45vh;
+  width: 100%;
+  z-index: $main;
+  background-color: $white;
+  border-top: 4px solid $dark-gray-blue;
+  font-size: 62.5%;
 }
 
 #background {
@@ -25,7 +26,6 @@ main {
   top: 0;
   img {
     width: 100%;
-    z-index: 0;
   }
 }
 
@@ -34,14 +34,14 @@ main {
   @include crossBrowser(border-radius, 50%);
   position: relative;
   top: -100px;
-  max-width: 200px;
+  width: 200px;
 }
 
 #title {
   position: relative;
   top: -50px;
   h1 {
-      font-size: 50px;
+     @include rem-px(font-size, 5);
   }
 }
 
@@ -62,16 +62,16 @@ ul {
 
 .dark-text {
   font-weight: bold;
-  color: #2d3c49;
+  color: $dark-gray-blue;
 }
 
 .text-400 {
   font-weight: 400;
-  font-size: 30px;
+  @include rem-px(font-size, 3);
 }
 
 .text-light-color {
-  color: #7d97ad;
+  color: $light-gray-blue;
 }
 
 a {
@@ -86,17 +86,23 @@ a {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 500px) {
   #title {
-    text-align: center;
     h1 {
-      font-size: 40px;
+      @include rem-px(font-size, 3);
     }
-    h3 {
-      font-size: 15px;
+    h2 {
+      @include rem-px(font-size, 1.5);
     }
   }
   .text-400 {
-    font-size: 25px;
+    @include rem-px(font-size, 2.5);
+  }
+  main {
+    margin-top: 25vh;
+  }
+  #bio-img {
+      width: 120px;
+      top: -60px;
   }
 }

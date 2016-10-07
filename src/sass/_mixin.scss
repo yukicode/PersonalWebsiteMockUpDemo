@@ -1,6 +1,22 @@
+//add cross browser compatibility for the property
 @mixin crossBrowser($property, $value){
     #{$property}: $value;
     -webkit-#{$property}: $value;
     -ms-box-#{$property}: $value;
     -moz-box-#{$property}: $value;
+}
+
+//set size of the property
+//compatible with ie browsers
+@mixin rem-px($property, $remNum...){
+    $px: ();
+    $rem: ();
+
+    @each $n in $remNum {
+        $px: append($px, $n*10+px, space);
+        $rem: append($rem, $n+rem, space);
+    }
+
+    #{$property}: $px;
+    #{$property}: $rem;
 }
