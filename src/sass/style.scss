@@ -54,15 +54,20 @@ ul {
 }
 
 .project-entry {
-    padding: 0;
+    margin: 5px;
     border: 1px solid $light-gray-blue;
     @include crossBrowser(border-radius, 3px);
-    @include crossBrowser(box-shadow, 0px 0px 10px -6px $light-gray-blue);
+    @include crossBrowser(box-shadow, 0px 0px 20px -6px $light-gray-blue);
     .buttons {
-        padding: 3px;
+        padding: 5px;
     }
     &:hover {
         @include crossBrowser(box-shadow, 5px 5px 20px -6px $light-gray-blue);
+    }
+    .glyphicon {
+        display: block;
+        margin-right: 8px;
+        float: left;
     }
 }
 

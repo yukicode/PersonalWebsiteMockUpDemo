@@ -21,13 +21,19 @@
         </header>
         <section class="container" id="projects">
             <h2 class="row text-400 text-light-color text-center section-title">Featured Work</h2>
-            <div class="row">
-                <div class="col-lg-6 project-entry">
-                    <h3 class="text-center">Neighborhood Map</h3>
-                    <img class="img-responsive center-block" src="./images/neighborhood-map-01.jpg" alt="neighborhood-map-01">
-                    <div class="text-center buttons">
-                        <a href="#" class="btn btn-default">View GitHub</a>
-                        <a href="#" class="btn btn-default">View Demo</a>
+            <div class="row" data-bind="foreach: projects">
+                <div class="col-lg-6">
+                    <div class="project-entry">
+                        <h3 class="text-center" data-bind="text: name"></h3>
+                        <img class="img-responsive center-block" data-bind="attr: {src: images[0], alt: images[0]}">
+                        <div class="text-center buttons">
+                            <a class="btn btn-default" role="button" target="_blank" data-bind="attr: {href: link}">
+                                <span class="glyphicon glyphicon-folder-open"></span> View GitHub
+                            </a>
+                            <a class="btn btn-default" role="button" target="_blank" data-bind="attr: {href: demoLink}, disableEmpty: demoLink">
+                                <span class="glyphicon glyphicon-play"></span> View Demo
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -51,11 +57,6 @@
     <section id="background">
         <img id="background-img" class="img-responsive center-block" src="./images/graph.svg" alt="background-img-skills">
     </section>
-    <!--<script type="text/html" id="project-template">
-        <img data-binding="attr: {src: image-src, alt: image-name}">
-        <h3 data-bind="text: name"></h3>
-        <p>Credits: <span data-bind="text: credits"></span></p>
-    </script>-->
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/knockout-3.4.0.js"></script>

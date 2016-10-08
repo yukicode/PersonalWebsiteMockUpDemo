@@ -14,6 +14,13 @@ var projects = [
         ],
         link: 'https://github.com/yukicode/UDA-front-end-program',
         demoLink: '',
+    },
+    {
+        name: "Arcade Game Frogger",
+        images: ["./images/neighborhood-map-01.jpg"],
+        description:[],
+        link:'https://github.com/yukicode/UDA-front-end-program',
+        demoLink: 'https://yukicode.github.io/UDA-front-end-program/',
     }
 ];
 
@@ -21,5 +28,12 @@ var viewModel = {
     bio : bio,
     projects: projects,
 };
-
+ko.bindingHandlers.disableEmpty = {
+    init: function(element, valueAccessor, allBindings) {
+        var value = ko.unwrap(valueAccessor());
+        if(!value){
+            $(element).addClass("disabled");
+        }
+    }
+};
 ko.applyBindings(viewModel);
