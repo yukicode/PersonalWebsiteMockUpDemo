@@ -22,10 +22,22 @@
         <section class="container" id="projects">
             <h2 class="row text-400 text-light-color text-center section-title">Featured Work</h2>
             <div class="row" data-bind="foreach: projects">
-                <div class="col-lg-6">
+                <div class="col-md-6">
                     <div class="project-entry">
+                        <div class="carousel slide" data-bind="attr: {id: idattr}">
+                            <!-- Indicators -->
+                            <ol class="carousel-indicators" data-bind="foreach: images">
+                                <li data-bind="attr: {'data-target': $parent.id, 'data-slide-to': $index}, checkActive: $index"></li>
+                            </ol>
+                            <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox" data-bind="foreach: images">
+                                <div class="item" data-bind="checkActive: $index">
+                                    <img data-bind="attr: {'src': src, 'alt': src}">
+                                </div>
+                            </div>
+                        </div>
                         <h3 class="text-center" data-bind="text: name"></h3>
-                        <img class="img-responsive center-block" data-bind="attr: {src: images[0], alt: images[0]}">
+                        <p data-bind="text: projectDescrition"></p>
                         <div class="text-center buttons">
                             <a class="btn btn-default" role="button" target="_blank" data-bind="attr: {href: link}">
                                 <span class="glyphicon glyphicon-folder-open"></span> View GitHub
