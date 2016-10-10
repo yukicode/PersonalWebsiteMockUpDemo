@@ -20,7 +20,9 @@
             <ul class="container" id="topContact"></ul>
         </header>
         <section class="container" id="projects">
-            <h2 class="row text-400 text-light-color text-center section-title">Featured Work</h2>
+            <div class="row">
+                <h2 class="text-center section-title">FEATURED WORK</h2>
+            </div>
             <div class="row" data-bind="foreach: projects">
                 <div class="col-md-6">
                     <div class="project-entry">
@@ -50,26 +52,25 @@
                 </div>
             </div>
         </section>
-        <section class="container gray" id="education">
-            <h2 class="row text-400 text-light-color">Education</h2>
-            <p>Add contents</p>
-            <p>Add contents</p>
-            <p>Add contents</p>
-            <p>Add contents</p>
-            <p>Add contents</p>
-            <p>Add contents</p>
+        <section class="container" id="skills">
+            <div class="row">
+                <h2 class="col-lg-12 text-center section-title">SKILLS</h2>
+                <canvas id="language-chart" class="col-sm-6"></canvas>
+                <canvas id="framework-chart" class="col-sm-6-6"></canvas>
+            </div>
         </section>
     </main>
 
-    <footer class="container" id="lets-connect">
-        <h2 class="blue text-center row">LET US CONNECT</h2>
-        <ul id="footerContacts" class="row"></ul>
+    <footer class="container">
+        <ul id="contacts" class="row"></ul>
     </footer>
 
     <section id="background">
         <img id="background-img" class="img-responsive center-block" src="./images/graph.svg" alt="background-img-skills">
     </section>
+
     <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/chart.bundle.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/knockout-3.4.0.js"></script>
     <script src="js/main.js"></script>

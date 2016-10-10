@@ -50,8 +50,11 @@ ul {
 }
 
 .section-title {
+    color: $light-gray-blue;
     margin-top: 50px;
     margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid $light-gray-blue;
 }
 
 .project-entry {
@@ -73,8 +76,12 @@ ul {
     p {
       @include rem-px(font-size, 1.5);
       padding: 10px;
-      height: 150px;
+      height: 130px;
     }
+}
+
+#contacts {
+  border-top: 1px solid $light-gray-blue;
 }
 
 .gray {
@@ -91,15 +98,6 @@ ul {
 .dark-text {
   font-weight: bold;
   color: $dark-gray-blue;
-}
-
-.text-400 {
-  font-weight: 400;
-  @include rem-px(font-size, 3);
-}
-
-.text-light-color {
-  color: $light-gray-blue;
 }
 
 a {
@@ -123,12 +121,11 @@ a {
       @include rem-px(font-size, 1.5);
     }
   }
-  .text-400 {
-    @include rem-px(font-size, 2.5);
-  }
+
   main {
     margin-top: 25vh;
   }
+
   #bio-img {
       width: 120px;
       top: -60px;
