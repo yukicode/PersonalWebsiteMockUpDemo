@@ -6,7 +6,7 @@ var cloud = require("d3-cloud");
 var fs = require("fs");
 var decorationArray;
 var index = 0;
-var colors = ["#1199c3","#2d3c49"];
+var colors = ["#f8f8f8","#02b3e4", "#7d97ad"];
 //TODO: load skills from the bio object
 //module.export works only when bio is in a separated file
 var skills = [
@@ -23,7 +23,6 @@ var skills = [
     "git",
     "Knockout.js",
     "Visual Studio",
-    "Visual Studio Code",
     "Sublime Text",
 ];
 
@@ -43,7 +42,7 @@ jsdom.env(
         })
         words = words.concat(decorations);
         var worldCloud = cloud()
-            .size([1170, 350])
+            .size([1200, 350])
             .canvas(function() { return window.document.createElement("canvas"); })
             .words(words)
             .padding(5)
@@ -54,13 +53,13 @@ jsdom.env(
             .start();
         var svg = window.d3.select("body")
             .append("svg")
-            .attr("width", 1080)
+            .attr("width", 1050)
             .attr("height", 350)
             .attr("xmlns","http://www.w3.org/2000/svg")
             .attr("xmlns:xlink","http://www.w3.org/1999/xlink");
 
         svg.append("g")
-            .attr("transform", "translate(" + 1080 / 2 + "," + 350 / 2 + ")")
+            .attr("transform", "translate(" + 1050 / 2 + "," + 350 / 2 + ")")
             .selectAll("text")
             .data(words)
             .enter().append("text")
@@ -75,6 +74,6 @@ jsdom.env(
             })
             .text(function(d) { return d.text; });
 
-        fs.writeFileSync('./images/graph.svg', window.document.body.children[1].outerHTML);
+        fs.writeFileSync('./background-large.svg', window.document.body.children[1].outerHTML);
     }
 );

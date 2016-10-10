@@ -59,18 +59,21 @@
                 <canvas id="language-chart" class="col-sm-12"></canvas>
             </div>
         </section>
+        <section class="container">
+            <ul id="contacts" class="row list-inline text-center">
+                <li><a data-bind="attr: {href: contacts.linkedIn}" target="_blank"><i class="icon-linkedin-sign"></i></a></li>
+                <li><a data-bind="attr: {href: contacts.github}" target="_blank"><i class="icon-github-sign"></i></a></li>
+                <li><a data-bind="attr: {href: contacts.email}"><i class="icon-envelope"></i></a></li>
+            </ul>
+        </section>
     </main>
 
-    <footer class="container">
-        <ul id="contacts" class="row list-inline text-center">
-            <li><a data-bind="attr: {href: contacts.linkedIn}" target="_blank"><i class="icon-linkedin-sign"></i></a></li>
-            <li><a data-bind="attr: {href: contacts.github}" target="_blank"><i class="icon-github-sign"></i></a></li>
-            <li><a data-bind="attr: {href: contacts.email}"><i class="icon-envelope"></i></a></li>
-        </ul>
-    </footer>
-
     <section id="background">
-        <img id="background-img" class="img-responsive center-block" src="./images/graph.svg" alt="background-img-skills">
+        <picture class="img-responsive center-block" alt="background-img-skills">
+            <source srcset="./images/background-middle.svg" media="(max-width: 1200px)">
+            <source srcset="./images/background-large.svg" media="(min-width: 1200px)">
+            <img src="./images/background-large.svg" alt="background-img-skills">
+        </picture>
     </section>
 
     <script src="js/jquery-2.2.4.min.js"></script>

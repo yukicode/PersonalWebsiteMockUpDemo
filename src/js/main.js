@@ -9,7 +9,7 @@ var projects = [
         name: "Neighborhood Map",
         idattr: "neighborhood-map",
         id: "#neighborhood-map",
-        images: [{ src: "./images/neighborhood-map-01.jpg" },],
+        images: [{ src: "./images/neighborhood-map-01.jpg" },{ src: "./images/neighborhood-map-02.jpg" },{ src: "./images/neighborhood-map-03.jpg" },],
         projectDescrition: "Neighborhood Map is a single-page, responsive web application that helps people location appartments in Seattle and nearby area. Users could search for apartments based on name or desired location. Apartments can be sorted by name or price range. The app provides detailed apartment informations including Google and Yelp reviews.",
         techniqueDescription: "The application uses Knockout and jQuery in the front-end; Node and Express in the back-end. Front-end and back-end communites through a restful API. Building process was automated using Gulp.",
         link: 'https://github.com/yukicode/UDA-front-end-program',
@@ -38,7 +38,7 @@ var projects = [
         idattr: "factorio-mod-extension",
         id: "#factorio-mod-extension",
         images: [{ src: "./images/factorio-mod-extension-01.jpg" }],
-        projectDescrition: "An extension of a game mod that adds extra items and utilities to the game.",
+        projectDescrition: "An extension to the exisiting Factorio mod. It adds extra items and utilities to the game. It also adds the new items to the technique tree.",
         link: "https://github.com/MattMcMullan/BeltUtils",
         demoLink: "",
     },
@@ -165,7 +165,7 @@ var initChart = (function () {
         languageChartData.datasets[1].data.push(entry.projects);
     });
     Chart.defaults.global.defaultFontColor = "#2d3c49";
-    Chart.defaults.global.defaultFontSize = 24;
+    Chart.defaults.global.defaultFontSize = 20;
     var ctx1 = document.getElementById("language-chart");
     var languageBarChart = new Chart(ctx1, {
         type: 'horizontalBar',

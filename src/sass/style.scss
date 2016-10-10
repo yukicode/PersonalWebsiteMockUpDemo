@@ -10,12 +10,16 @@
   color: $dark-gray-blue;
 }
 
+body {
+  background-color: $dark-gray-blue;
+}
+
 main {
   margin-top: 45vh;
   width: 100%;
   z-index: $main;
   background-color: $white;
-  border-top: 4px solid $dark-gray-blue;
+  border-top: 3px solid $light-gray-blue;
   font-size: 62.5%;
 }
 
@@ -30,7 +34,7 @@ main {
 }
 
 #bio-img {
-  border: 4px solid $dark-gray-blue;
+  border: 3px solid $light-gray-blue;
   @include crossBrowser(border-radius, 50%);
   position: relative;
   top: -100px;
@@ -71,12 +75,19 @@ ul {
     p {
       @include rem-px(font-size, 1.5);
       padding: 10px;
-      min-height: 130px;
+      min-height: 150px;
     }
 }
 
+.carousel-indicators .active {
+  background-color: $dark-gray-blue;
+}
+.carousel-indicators li {
+  background-color: $white;
+}
+
 canvas {
-  background-color: rgba(183, 191, 191, 0.15);
+  background-color: $tranparent-blue;
   margin-bottom: 5vh;
 }
 
@@ -125,7 +136,7 @@ a {
   overflow: hidden;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 640px) {
   #title {
     h1 {
       @include rem-px(font-size, 3);
@@ -142,5 +153,9 @@ a {
   #bio-img {
       width: 120px;
       top: -60px;
+  }
+
+  #language-chart, iframe {
+    display: none;
   }
 }
