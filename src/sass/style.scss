@@ -51,14 +51,14 @@ ul {
 
 .section-title {
     color: $light-gray-blue;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    padding-bottom: 30px;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    padding-bottom: 3vh;
     border-bottom: 1px solid $light-gray-blue;
 }
 
 .project-entry {
-    margin: 0 5px 40px 0;
+    margin: 0 0.1vw 4vh 0;
     border: 1px solid $gray;
     @include crossBrowser(border-radius, 3px);
     @include crossBrowser(box-shadow, 0px 0px 20px -6px $gray);
@@ -68,20 +68,33 @@ ul {
     &:hover {
         @include crossBrowser(box-shadow, 5px 5px 20px -6px $light-gray-blue);
     }
-    .glyphicon {
-        display: block;
-        margin-right: 8px;
-        float: left;
-    }
     p {
       @include rem-px(font-size, 1.5);
       padding: 10px;
-      height: 130px;
+      min-height: 130px;
     }
+}
+
+canvas {
+  background-color: rgba(183, 191, 191, 0.15);
+  margin-bottom: 5vh;
 }
 
 #contacts {
   border-top: 1px solid $light-gray-blue;
+  a {
+    margin: 2vw;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  i {
+    padding: 1vw;
+    @include rem-px(font-size, 4);
+    &:hover {
+      color: $light-gray-blue;
+    }
+  }
 }
 
 .gray {

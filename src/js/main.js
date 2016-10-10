@@ -105,9 +105,16 @@ var frameworks = [
     },
 ];
 
+var contacts = {
+    github: "https://github.com/yukicode",
+    linkedIn: "https://www.linkedin.com/in/xueru-mcmullan-89993326",
+    email: "mailto:yolandaapply@gmail.com",
+};
+
 var viewModel = {
     bio: bio,
     projects: projects,
+    contacts: contacts,
 };
 ko.bindingHandlers.disableEmpty = {
     init: function (element, valueAccessor, allBindings) {
@@ -131,7 +138,7 @@ var initChart = (function () {
     var data = function () {
         this.labels = [];
         this.datasets = [{
-            label: "Courses",
+            label: "Training",
             backgroundColor: 'rgba(17, 153, 195, 0.4)',
             borderColor: 'rgba(54, 162, 235, 1)',
             borderWidth: 1,
