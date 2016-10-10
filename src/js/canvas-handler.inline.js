@@ -15,9 +15,8 @@ var initChart = (function () {
                 data: [],
             }];
     };
-
+    //add personal data to the dataset
     var languageChartData = new data();
-
     languages.forEach(function (entry) {
         languageChartData.labels.push(entry.name);
         languageChartData.datasets[0].data.push(entry.courses);
@@ -28,10 +27,13 @@ var initChart = (function () {
         languageChartData.datasets[0].data.push(entry.courses);
         languageChartData.datasets[1].data.push(entry.projects);
     });
+
+    //set graph color and font size
     Chart.defaults.global.defaultFontColor = "#2d3c49";
-    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-    
+    var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;   
     Chart.defaults.global.defaultFontSize = width > 640? 20 : 12;
+
+    //set canvas
     var ctx1 = document.getElementById("language-chart");
     var languageBarChart = new Chart(ctx1, {
         type: 'horizontalBar',
