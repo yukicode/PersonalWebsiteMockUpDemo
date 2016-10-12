@@ -10,8 +10,8 @@ var projects = [
         idattr: "neighborhood-map",
         id: "#neighborhood-map",
         images: [{ src: "./images/neighborhood-map-01.jpg" },{ src: "./images/neighborhood-map-02.jpg" },{ src: "./images/neighborhood-map-03.jpg" },],
-        projectDescrition: "Neighborhood Map is a single-page, responsive web application that helps people location appartments in Seattle and nearby area. Users could search for apartments based on name or desired location. Apartments can be sorted by name or price range. The app provides detailed apartment informations including Google and Yelp reviews.",
-        techniqueDescription: "The application uses Knockout and jQuery in the front-end; Node and Express in the back-end. Front-end and back-end communites through a restful API. Building process was automated using Gulp.",
+        projectDescrition: "Responsive, single-page Google Map application that displays the complete apartment map in the Seattle area which facilitates apartment seeking. The application provides detailed information as well as additional search functionalities that help users to locate and narrow down apartments at desired locations.",
+        techDescription: "The front-end was built with Bootstrap, jQuery and Knockout.js under MVVM design pattern. The back-end was built in Node.js and Express.js to handle third party API requests.",
         link: 'https://github.com/yukicode/UDA-front-end-program',
         demoLink: '',
     },
@@ -116,6 +116,8 @@ var viewModel = {
     projects: projects,
     contacts: contacts,
 };
+
+//disable the button if the content is empty
 ko.bindingHandlers.disableEmpty = {
     init: function (element, valueAccessor, allBindings) {
         var value = ko.unwrap(valueAccessor());
@@ -124,6 +126,7 @@ ko.bindingHandlers.disableEmpty = {
         }
     }
 };
+//add active class to the first image div of the carousel
 ko.bindingHandlers.checkActive = {
     init: function (element, valueAccessor, allBindings) {
         var value = ko.unwrap(valueAccessor());
