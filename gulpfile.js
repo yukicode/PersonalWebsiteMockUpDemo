@@ -32,6 +32,7 @@ gulp.task("clean", ["copy"], function() {
     del.sync([
         "./dist/**/*.js",
         "./dist/**/*.css",
+        "./dist/**/*.scss",
         "./dist/**/*.html",
     ]);
     deleteEmpty.sync("./dist/");
